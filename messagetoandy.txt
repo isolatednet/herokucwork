@@ -5,5 +5,118 @@ I am beginning to understand how git works.
 
 And I added this line at github using the edit web interface. After I save this what happens to the file on my computer?
 
+Another edit:
+
+I still have difficulties uploading the blog directory:
+
+vagrant@vagrant-ubuntu:/shared/blog/herokucwork$ cd /shared/blog
+vagrant@vagrant-ubuntu:/shared/blog$ git init
+Reinitialized existing Git repository in /shared/blog/.git/
+vagrant@vagrant-ubuntu:/shared/blog$ git add / .
+fatal: '/' is outside repository
+vagrant@vagrant-ubuntu:/shared/blog$ git add /shared/blog/.
+vagrant@vagrant-ubuntu:/shared/blog$ git commit -m 'uploading all that there is in my blog directory'
+[master 1ffe326] uploading all that there is in my blog directory
+ Committer: vagrant <vagrant@vagrant-ubuntu.hsd1.ca.comcast.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+If the identity used for this commit is wrong, you can fix it with:
+
+    git commit --amend --author='Your Name <you@example.com>'
+
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 160000 herokucwork
+vagrant@vagrant-ubuntu:/shared/blog$ git remote add origin git@github.com:isolatednet@gmail.com/blog
+vagrant@vagrant-ubuntu:/shared/blog$ git push origin master
+ERROR: isolatednet@gmail.com/blog.git doesn't exist. Did you enter it correctly?
+fatal: The remote end hung up unexpectedly
+vagrant@vagrant-ubuntu:/shared/blog$ git remote add origin git@github.com:isolatednet/blog
+fatal: remote origin already exists.
+vagrant@vagrant-ubuntu:/shared/blog$ git push origin master
+ERROR: isolatednet@gmail.com/blog.git doesn't exist. Did you enter it correctly?
+fatal: The remote end hung up unexpectedly
+vagrant@vagrant-ubuntu:/shared/blog$ git remote add origin git@github.com:isolatednet/blog
+fatal: remote origin already exists.
+vagrant@vagrant-ubuntu:/shared/blog$ git remote add origin git@github.com:isolatednet/blog.git
+fatal: remote origin already exists.
+vagrant@vagrant-ubuntu:/shared/blog$ push -u origin master
+The program 'push' is currently not installed.  You can install it by typing:
+sudo apt-get install heimdal-clients
+vagrant@vagrant-ubuntu:/shared/blog$ git push -u origin master
+ERROR: isolatednet@gmail.com/blog.git doesn't exist. Did you enter it correctly?
+fatal: The remote end hung up unexpectedly
+vagrant@vagrant-ubuntu:/shared/blog$ exit
+logout
+Connection to localhost closed.
+root@uma-bluebook:/home/uma/vagrant# vagrant up
+[default] VM already created. Booting if its not already running...
+root@uma-bluebook:/home/uma/vagrant# vagrant ssh
+Warning: Permanently added '[localhost]:2222' (RSA) to the list of known hosts.
+Linux vagrant-ubuntu 2.6.32-24-generic #43-Ubuntu SMP Thu Sep 16 14:17:33 UTC 2010 i686 GNU/Linux
+
+
+Ubuntu 10.04.1 LTS
+
+
+Last login: Fri Feb 18 15:28:24 2011 from 10.0.2.2
+
+
+This Vagrant VM brought to you by...
+
+..................................................
+########.##....##..######...####.##....##.########
+##.......###...##.##....##...##..###...##.##......
+##.......####..##.##.........##..####..##.##......
+######...##.##.##.##...####..##..##.##.##.######..
+##.......##..####.##....##...##..##..####.##......
+##.......##...###.##....##...##..##...###.##......
+########.##....##..######...####.##....##.########
+..................................................
+.......##....##....###....########..########......
+........##..##....##.##...##.....##.##.....##.....
+.........####....##...##..##.....##.##.....##.....
+..........##....##.....##.########..##.....##.....
+..........##....#########.##...##...##.....##.....
+..........##....##.....##.##....##..##.....##.....
+..........##....##.....##.##.....##.########......
+..................................................
+
+Come visit us at http://engineyard.com
+
+
+vagrant@vagrant-ubuntu:/shared$ cd /shared/blog
+vagrant@vagrant-ubuntu:/shared/blog$ git init
+Reinitialized existing Git repository in /shared/blog/.git/
+vagrant@vagrant-ubuntu:/shared/blog$ git add .
+vagrant@vagrant-ubuntu:/shared/blog$ git commit -m 'Baseline version of blog application'
+# On branch master
+nothing to commit (working directory clean)
+vagrant@vagrant-ubuntu:/shared/blog$ git tag -a -m 'Tag baseline version' baseline
+fatal: tag 'baseline' already exists
+vagrant@vagrant-ubuntu:/shared/blog$ git remote add origin git@github.com:isolatednet/blog
+fatal: remote origin already exists.
+vagrant@vagrant-ubuntu:/shared/blog$ git push origin master
+ERROR: isolatednet@gmail.com/blog.git doesn't exist. Did you enter it correctly?
+fatal: The remote end hung up unexpectedly
+vagrant@vagrant-ubuntu:/shared/blog$ vagrant halt
+vagrant: command not found
+vagrant@vagrant-ubuntu:/shared/blog$ cd /
+vagrant@vagrant-ubuntu:/$ vagrant halt
+vagrant: command not found
+vagrant@vagrant-ubuntu:/$ sudo vagrant halt
+sudo: vagrant: command not found
+vagrant@vagrant-ubuntu:/$ cd /home/uma/vagrant
+-bash: cd: /home/uma/vagrant: No such file or directory
+vagrant@vagrant-ubuntu:/$ sudo -s -H
+root@vagrant-ubuntu:/# vagrant halt
+vagrant: command not found
+root@vagrant-ubuntu:/# 
+
+
 
 Thank you 
